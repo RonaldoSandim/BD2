@@ -1,4 +1,3 @@
-
 use psdb;
 
 -- 1. Escreva uma consulta SQL que retorne todos os empregados (employees).*/
@@ -96,3 +95,58 @@ limit 100;
 
 -- 15. Escreva uma consulta SQL que retorne todos os empregados (employees) cujo nome (first_name) seja
 -- igual a 'Basil'.
+
+
+select first_name
+from employees
+where  first_name like '%Basil%';          
+
+-- 16. Escreva uma consulta SQL que retorne todos os empregados (employees) cujo nome (first_name) seja
+-- igual a 'Basil' e o sexo (gender) igual a 'M'.
+
+select first_name, gender
+from employees
+where  first_name like '%Basil%' and gender like '%M';
+   
+-- 17. Escreva uma consulta SQL que retorne todos os empregados (employees) cujo nome (first_name) 
+-- seja igual a 'Basil' e o sexo (gender) seja diferente de 'M'.
+
+select first_name, gender
+from employees
+where  first_name='Basil' and gender not like '%M';
+
+
+-- 18. Escreva uma consulta SQL que retorne todos os empregados (employees) cujo nome (first_name) seja igual 
+-- a 'Basil', o sobrenome (last_name) igual a 'Strooper' e o sexo (gender) seja igual a 'M'.
+
+select first_name,last_name,gender
+from employees
+where  first_name='Basil' 
+and last_name='Strooper' 
+and gender='M';
+
+-- 19. Escreva uma consulta SQL que retorne todos os empregados (employees) cujo nome (first_name)
+--  contenha no início a combinação de caracteres 'Crist'.
+
+select first_name
+from employees
+where  first_name like 'Crist%';
+
+
+
+-- 20. Escreva uma consulta SQL que retorne todos os empregados (employees) cujo nome (first_name)
+-- contenha no final os seguintes caracteres 'zette'.
+
+select first_name
+from employees
+where  first_name like '%zette';
+
+-- 21. Escreva uma consulta SQL que retorne todos os empregados (employees) cujo nome (first_name) contenha no final 
+-- a combinação de caracteres 'zette' e que o sexo (gender) seja igual a 'M'.
+
+select first_name
+from employees
+where  first_name like '%zette';
+
+
+
